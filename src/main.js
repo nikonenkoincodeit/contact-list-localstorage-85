@@ -1,5 +1,5 @@
 import { refs } from "./refs";
-import { saveData, getData } from "./api";
+import { saveData, getData, deleteData } from "./api";
 import { createCard } from "./markup";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,3 +47,19 @@ function addCard(markup) {
 }
 
 init();
+
+refs.box.addEventListener("click", deleteCard);
+
+async function deleteCard(e) {
+  try {
+    if (e.target.nodeName !== "BUTTON") {
+      return;
+    }
+    const card = e.target.closest(".js-wrap-card");
+    const cardId = card.dataset.cardid;
+    await deleteData(cardId);
+    card.remove();
+  } catch (error) {
+    console.log(error.message);
+  }
+}
