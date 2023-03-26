@@ -8,18 +8,11 @@
       "id": "EyqPlfj"
     },
     {
-      "name": "got",
+      "name": "Mango",
       "number": "+434343434343",
       "email": "vygovskiy201444@gmail.com",
       "createdAt": 1676196910094,
       "id": "CJsPFkE"
-    },
-    {
-      "name": "Test",
-      "number": "+388888888",
-      "email": "sdf@dd.d",
-      "createdAt": 1678629937290,
-      "id": "qV_zdUK"
     },
     {
       "name": "Poly",
@@ -27,6 +20,13 @@
       "email": "intern30@goit.ua",
       "createdAt": 1679731705608,
       "id": "1zRaPDO"
+    },
+    {
+      "name": "firebase",
+      "number": "2522556",
+      "email": "intern45@goit.ua",
+      "createdAt": 1679812507630,
+      "id": "NfQvKII"
     }
   ]
 }
