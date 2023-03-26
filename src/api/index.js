@@ -34,3 +34,19 @@ export function deleteData(id) {
     return response.json();
   });
 }
+
+export function updateData (id, data) {
+  return fetch(BASE_URL + id, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  });
+
+}

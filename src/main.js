@@ -1,5 +1,5 @@
 import { refs } from "./refs";
-import { saveData, getData, deleteData } from "./api";
+import { saveData, getData, deleteData, updateData } from "./api";
 import { createCard } from "./markup";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -55,11 +55,33 @@ async function deleteCard(e) {
     if (e.target.nodeName !== "BUTTON") {
       return;
     }
-    const card = e.target.closest(".js-wrap-card");
-    const cardId = card.dataset.cardid;
+    const {cardId,card} = getInfoCard(e)
     await deleteData(cardId);
     card.remove();
   } catch (error) {
     console.log(error.message);
   }
 }
+
+refs.box.addEventListener("input", updateName);
+
+async function updateName (e) {
+  try {
+    const name=e.target.textContent;
+    // console.log(text)
+     const {cardId} = getInfoCard(e)
+    console.log(cardId) 
+    await updateData(cardId, {name})
+
+  } catch (error) {
+    console.log (error.message)
+    
+  }
+}
+ 
+function getInfoCard (e) {
+  const card = e.target.closest(".js-wrap-card");
+  const cardId = card.dataset.cardid;
+  return { card, cardId}
+}
+
