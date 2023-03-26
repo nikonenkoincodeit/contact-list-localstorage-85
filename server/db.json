@@ -1,34 +1,6 @@
 {
   "contacts": [
     {
-      "name": "Igor",
-      "number": "+3805656545888",
-      "email": "pavel@gmail.com",
-      "createdAt": 1676193108450,
-      "id": "EyqPlfj"
-    },
-    {
-      "name": "Mango",
-      "number": "+434343434343",
-      "email": "vygovskiy201444@gmail.com",
-      "createdAt": 1676196910094,
-      "id": "CJsPFkE"
-    },
-    {
-      "name": "Poly",
-      "number": "2522556",
-      "email": "intern30@goit.ua",
-      "createdAt": 1679731705608,
-      "id": "1zRaPDO"
-    },
-    {
-      "name": "firebase",
-      "number": "2522556",
-      "email": "intern45@goit.ua",
-      "createdAt": 1679812507630,
-      "id": "NfQvKII"
-    },
-    {
       "name": "alex",
       "number": "+3805555555",
       "email": "alex@gmail.com",
