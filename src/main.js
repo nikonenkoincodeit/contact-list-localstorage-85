@@ -1,5 +1,6 @@
 import { uid } from 'uid/secure'
 import {formEl} from "./refs";
+import {saveData} from "./api"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 
@@ -12,8 +13,12 @@ function onSubmit(evt){
     console.log(name, number, email);
     const nameVal = name.value.trim();
     const numberVal = number.value.trim();
-    const emailVal = email.value.trim()
-    const data = createdObj(name, number, email)
+    const emailVal = email.value.trim();
+    const data = createdObj(nameVal, numberVal, emailVal);
+    saveData(data);
+    evt.target.reset()
+
+
 }
 
 function createdObj(name, number, email) {
